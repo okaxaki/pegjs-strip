@@ -3,7 +3,7 @@ pegjs-strip is a utility for removing Javascript code fragments from the specifi
 
 The utility removes all code-related statements such as the initializer block, actions and labels. The semantic predicate `&{<code>}` and `!{<code>}` are replaced with `&{return true;}` or `!{return false;}` respectively. 
 
-By default, the utility kepp comment blocks. To remove comments, `--strip-comment` option can be used.
+By default, the utility does not strip comment blocks. To remove comments, `--strip-comment` option can be used.
 
 ## Usage
 
