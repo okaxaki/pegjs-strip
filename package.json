@@ -1,6 +1,6 @@
 {
   "name": "pegjs-strip",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A utility for removing Javascript code from the PEG.js grammer file.",
   "bin": {
     "pegjs-strip": "bin/cmd.js"

@@ -13,7 +13,7 @@ Usage: pegjs-strip [options] file
 
 Options:
  -h, --help                     show this help.
-     --keep-comment             Keep comments.
+     --strip-comment            Strip comments.
      --keep-initializer         Keep the initializer block.
      --keep-action              Keep actions.
      --keep-label               Keep labels.
