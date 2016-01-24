@@ -119,8 +119,12 @@ LineTerminatorSequence "end of line"
   / "\u2029"
 
 Comment "comment"
-  = MultiLineComment
-  / SingleLineComment
+  = ( MultiLineComment / SingleLineComment ) {
+    if(__options.keepComment) {
+      return text();
+    }
+    return '';
+  }
 
 MultiLineComment
   = "/*" (!"*/" SourceCharacter)* "*/"

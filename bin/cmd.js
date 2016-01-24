@@ -6,10 +6,11 @@ var _T = function(f) {return f.toString().match(/[^]*\/\*\n([^]*)\n\s*\*\/\}$/)[
 
 var getopt = (new (require('node-getopt'))([
 	['h','help','show this help.'],
+	['','strip-comment','Strip comments.'],
 	['','keep-initializer','Keep the initializer block.'],
-	['','keep-action','Keep all actions.'],
-	['','keep-label','Keep all labels.'],
-	['','keep-semantic-predicate','Keep all semantic predicates.'],
+	['','keep-action','Keep actions.'],
+	['','keep-label','Keep labels.'],
+	['','keep-semantic-predicate','Keep semantic predicates.'],
 ])).bindHelp();
 
 getopt.setHelp(_T(function(){/*
@@ -46,6 +47,7 @@ if(1<opt.argv.length) {
 try {
 	var input = require('fs').readFileSync(opt.argv[0],'utf-8');
 	var output = require("../src/index").process(input,{
+		keepComment:!(opt.options['strip-comment']||false),
 		keepInitializer:opt.options['keep-initializer']||false,
 		keepLabel:opt.options['keep-label']||false,
 		keepAction:opt.options['keep-action']||false,
