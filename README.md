@@ -1,6 +1,10 @@
 # pegjs-strip
 pegjs-strip is a command-line utility for removing Javascript code fragments from the specified PEG.js grammer file.
 
+By default, the utility removes the initializer block, actions and labels. The semantic predicate `&{<code>}` and `!{<code>}` are replaced with `&{return true;}` or `!{return false;}` respectively.
+
+## Usage
+
 ```
 Usage: pegjs-strip [options] file
 
@@ -13,5 +17,4 @@ Options:
      --keep-semantic-predicate  Keep all semantic predicates.
 ```
 
-Note that semantic predicates are not removed. `&{<code>}` and `!{<code>}` are replaced with
-`&{return true;}` or `!{return false;}` respectively.
+
