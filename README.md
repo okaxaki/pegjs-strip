@@ -1,7 +1,9 @@
 # pegjs-strip [![npm version](https://badge.fury.io/js/pegjs-strip.svg)](https://badge.fury.io/js/pegjs-strip)
 pegjs-strip is a utility for removing Javascript code fragments from the specified PEG.js grammer file.
 
-The utility removes all code-related statements such as the initializer block, actions and labels. The semantic predicate `&{<code>}` and `!{<code>}` are replaced with `&{return true;}` or `!{return false;}` respectively. By default, the utility kepp comment blocks. To remove comments, `--strip-comment` option can be used.
+The utility removes all code-related statements such as the initializer block, actions and labels. The semantic predicate `&{<code>}` and `!{<code>}` are replaced with `&{return true;}` or `!{return false;}` respectively. 
+
+By default, the utility kepp comment blocks. To remove comments, `--strip-comment` option can be used.
 
 ## Usage
 
