@@ -86,7 +86,7 @@ SemanticPredicateExpression
     if(__options.keepSemanticPredicate) {
       return text();
     } else {
-      return (operator == '&')?"{return true;}":"{return false;}";
+      return (operator == '&')?"&{return true;}":"!{return false;}";
     }
   }
 

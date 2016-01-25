@@ -80,7 +80,7 @@ module.exports = (function() {
             if(__options.keepSemanticPredicate) {
               return text();
             } else {
-              return (operator == '&')?"{return true;}":"{return false;}";
+              return (operator == '&')?"&{return true;}":"!{return false;}";
             }
           },
         peg$c26 = { type: "any", description: "any character" },
