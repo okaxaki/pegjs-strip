@@ -1,6 +1,6 @@
 {
   "name": "pegjs-strip",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A utility for removing Javascript code from the PEG.js grammer file.",
   "bin": {
     "pegjs-strip": "bin/cmd.js"
@@ -12,6 +12,10 @@
   "keywords": [
     "pegjs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okaxaki/pegjs-strip"
+  },
   "author": "Mitsutaka Okazaki",
   "homepage": "https://github.com/okaxaki/pegjs-strip",
   "license": "ISC",
