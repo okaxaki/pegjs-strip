@@ -1,4 +1,7 @@
 # pegjs-strip [![npm version](https://badge.fury.io/js/pegjs-strip.svg)](https://badge.fury.io/js/pegjs-strip)
+
+<img src="https://nodei.co/npm/pegjs-strip.png?downloads=true&stars=true" alt=""/>
+
 pegjs-strip is a utility for removing Javascript code fragments from the specified PEG.js grammer file.
 
 The utility removes all code-related statements such as the initializer block, actions and labels. The semantic predicate `&{<code>}` and `!{<code>}` are replaced with `&{return true;}` or `!{return false;}` respectively. 
