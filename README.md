@@ -2,7 +2,7 @@
 
 <img src="https://nodei.co/npm/pegjs-strip.png?downloads=true&stars=true" alt=""/>
 
-pegjs-strip is a utility for removing Javascript code fragments from the specified PEG.js grammer file.
+pegjs-strip is a utility for removing Javascript code fragments from the specified PEG.js grammar file.
 
 The utility removes all code-related statements such as the initializer block, actions and labels. The semantic predicate `&{<code>}` and `!{<code>}` are replaced with `&{return true;}` or `!{return false;}` respectively. 
 
@@ -25,7 +25,7 @@ Options:
 
 ## Example
 
-The following grammer is from the PEG.js documentation.
+The following grammar is from the PEG.js documentation.
 
 ```
 start
@@ -47,7 +47,7 @@ integer "integer"
   = digits:[0-9]+ { return parseInt(digits.join(""), 10); }
 ```
 
-To remove all the code in the grammer, just run the utility with the grammer file as the first argument. 
+To remove all the code in the grammar, just run the utility with the grammar file as the first argument. 
 The result is then written to the standard output as follows.
 
 ```
